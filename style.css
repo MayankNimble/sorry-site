@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND EFFECT */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #120000, #000);
+  z-index: -1;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .hero {
+  position: relative;
+  z-index: 3;
+}
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+p {
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+/* CHARACTER */
+#character {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  box-shadow: 0 0 40px rgba(255,0,0,0.7);
+  transition: 0.3s;
+}
+
+#character:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.scroll {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openBtn {
+  padding: 12px 25px;
+  background: red;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* DIALOG */
+.dialog {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
+
+.box {
+  background: #111;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+#typing {
+  white-space: pre-line;
+}
+
+/* HEARTS */
+.heart {
+  position: fixed;
+  color: red;
+  font-size: 20px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  z-index: 2; /* IMPORTANT */
+}
+
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999; /* FORCE ABOVE EVERYTHING */
+}
+
+/* HEART */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: #ff69b4;
+
+  animation: floatUp linear forwards;
+
+  /* STRONG GLOW */
+  text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff1493,
+    0 0 40px #ff1493;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
